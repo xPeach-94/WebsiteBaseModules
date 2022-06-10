@@ -1,0 +1,167 @@
+.menuBtn
+{
+    background-color: transparent;
+    border: 1px solid $menuColor;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+}
+
+.hamburgerMenuBar
+{
+    height: 0.3em;
+    width: 2em;
+    margin: 7px auto;
+    background-color: $menuColor;
+}
+
+.kebabMenuBar
+{
+    height: 0.32em;
+    width: 0.32em;
+    border: 1px solid $menuColor;
+    border-radius: 50px;
+    margin: 7px auto;
+    background-color: $menuColor;
+}
+
+.hotdogMenuBar
+{
+    height: 0.3em;
+    width: 1.4em;
+    margin: 7px auto;
+    background-color: $menuColor;
+}
+.hotdogMenuBar:nth-child(2)
+{
+    width: 2em;
+}
+
+.friesMenuBar
+{
+    height: 0.3em;
+    width: 2em;
+    margin: 7px auto;
+    background-color: $menuColor;
+}
+.friesMenuBar:nth-child(2)
+{
+    width: 1.4em;
+    margin-right: 8px;
+}
+
+.strawberryMenuBar
+{
+    height: 0.3em;
+    width: 2em;
+    margin: 7px auto;
+    background-color: $menuColor;
+}
+.strawberryMenuBar:nth-child(2)
+{
+    width: 1.5em;
+}
+.strawberryMenuBar:nth-child(3)
+{
+    width: 1em;
+}
+
+.chocolateBarDiv
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.chocolateMenuBar
+{
+    height: 0.32em;
+    width: 0.32em;
+    border: 1px solid $menuColor;
+    margin: 3px;
+    background-color: $menuColor;
+}
+
+// http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/howto/howto_css_dropdown.asp.html
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdownContent 
+{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 100;
+}
+
+/* Links inside the dropdown */
+.dropdownContent a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdownContent a:hover 
+{
+    background-color: $menuColor
+}
+
+// /* Show the dropdown menu on hover */
+// .dropdown:hover .dropdownContent 
+// {
+//     display: block;
+// }
+
+.topVerticalLeft
+{
+    display: block;
+}
+.topVerticalRight
+{
+    display: block;
+    left: 88vw;
+}
+.topHorizontalCenter
+{
+    display: block;
+    width: 99vw;
+    text-align: center;
+    a
+    {
+        display: inline-block;
+    }
+}
+.topHorizontalLeft
+{
+    display: block;
+    width: 99vw;
+    text-align: left;
+    a
+    {
+        display: inline-block;
+    }
+}
+.topHorizontalRight
+{
+    display: block;
+    width: 99vw;
+    text-align: right;
+    a
+    {
+        display: inline-block;
+    }
+}
+
+// /* Change the background color of the dropdown button when the dropdown content is shown */
+// .dropdown:hover .menuBtn 
+// {
+//     background-color: transparent;
+// }

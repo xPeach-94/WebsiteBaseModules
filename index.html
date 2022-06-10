@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <!--container for metadata-->
+    <head>
+        <!--Specify the character encoding for the HTML document.-->
+        <meta charset="utf-8">
+        
+        <!--Gives the browser instructions on how to control the page's dimensions and scaling.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.-->
+        <title>Website</title>
+
+        <!--Defines the relationship between the current document and an external resource. Used to link to external style sheets.-->
+        <link rel="stylesheet" href="Style/Style.css">
+
+        <!--Used to embed a client-side script (JavaScript).-->
+        <!-- "defer" A script that will not run until after the page has loaded-->
+        
+        <!-- <script src="Scripts/Modules/Module_addSubtractDays.js" defer type="text/javascript"></script> -->
+        <!-- <script src="Scripts/Modules/Module_resizeImage.js" defer type="text/javascript"></script> -->
+        <!-- <script src="Scripts/Modules/Module_sort.js" defer type="text/javascript"></script> -->
+
+        <script src="Scripts/Modules/Module_Menu.js" defer type="text/javascript"></script>
+        
+        <script src="Scripts/Script.js" defer type="text/javascript"></script>
+
+    </head>
+
+    <body>
+        
+        <header class="headerClass" id="headerId">
+            <div id="menuPlaceholder"></div>
+        </header>
+
+
+        <main class="mainClass" id="mainId" onclick="removeMenu()" style="height: 1000px; background-color: aquamarine;">
+
+        </main>
+
+
+        <footer class="footerClass" id="footerId">
+
+        </footer>
+
+    </body>
+
+</html>

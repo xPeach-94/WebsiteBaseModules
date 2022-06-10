@@ -1,8 +1,12 @@
-let icon = "hamburger"; // hamburger, kebab, hotdog, fries, strawberry, chocolate
-let navDirection = "topHorizontalCenter"; // topVerticalLeft, topVerticalRight, topHorizontalCenter, topHorizontalLeft, topHorizontalRight
-let links = ["home", "About Us", "Shop", "Return"];
+// customization variables:
+let icon = "hamburger"; 
+// hamburger, kebab, hotdog, fries, strawberry, chocolate
+let navDirection = "topHorizontalCenter"; 
+// topVerticalLeft, topVerticalRight, topHorizontalCenter, topHorizontalLeft, topHorizontalRight
+let links = ["Home", "About Us", "Shop", "Return", "ä", "b", "c"];
 
 
+// menu icon class function
 const menuIcon = function(shape)
 {
     switch (shape) 
@@ -91,6 +95,7 @@ const menuIcon = function(shape)
     }
 }
 
+// navigation direction function
 const navClick = function(direction = navDirection)
 {
     let btnContent = document.getElementById("dropdownContentId");
@@ -135,49 +140,9 @@ const navClick = function(direction = navDirection)
 
 }
 
-const removeMenu = function(direction = navDirection)
-{
-    let btnContent = document.getElementById("dropdownContentId");
-    switch (direction) 
-    {
-        case "topVerticalLeft":
-        {
-            btnContent.classList.remove("topVerticalLeft");
-            break;
-        }
-
-        case "topVerticalRight":
-        {
-            btnContent.classList.remove("topVerticalRight");
-            break;
-        }
-
-        case "topHorizontalCenter":
-        {
-            btnContent.classList.remove("topHorizontalCenter");
-            break;
-        }
-
-        case "topHorizontalLeft":
-        {
-            btnContent.classList.remove("topHorizontalLeft");
-            break;
-        }
-
-        case "topHorizontalRight":
-        {
-            btnContent.classList.remove("topHorizontalRight");
-            break;
-        }
-            
-        default:
-            console.log("Pick diffrend direction");
-            break;
-    }
-}
-
-//https://alvarotrigo.com/blog/hamburger-menu-css/
-
+// give navClick function to main, to remove dropdown content when clicked
+let main = document.getElementById("mainId");
+main.setAttribute("onclick", "navClick()");
 
 // create menu button
 var menu = document.getElementById("menuPlaceholder");
@@ -200,7 +165,16 @@ menuContent.setAttribute("id", "dropdownContentId");
 links.forEach(link => 
 {
     let linkName = document.createElement("a");
-    linkName.setAttribute("href", link.replace(/\s/g, '')+".html");
+    
+    if (link == "Home") 
+    {
+        linkName.setAttribute("href", "index.html");
+    }
+    else
+    {
+        linkName.setAttribute("href", link.replace(/\s/g, '')+".html");
+    }
+
     linkName.innerHTML = link;
     menuContent.appendChild(linkName);
 });
@@ -210,3 +184,7 @@ menuNav.appendChild(menuContent);
 
 menu.appendChild(menuNav);
 
+
+// sources:
+
+//https://alvarotrigo.com/blog/hamburger-menu-css/

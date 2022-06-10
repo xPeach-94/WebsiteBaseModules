@@ -347,6 +347,71 @@ h1, h2, h3, h4, h5, h6, p, body {
   padding: 0px;
 }
 
+@-webkit-keyframes menuTopLeft {
+  0% {
+    left: -97.8vw;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes menuTopLeft {
+  0% {
+    left: -97.8vw;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@-webkit-keyframes menuTopVerticalRight {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 77vw;
+  }
+}
+@keyframes menuTopVerticalRight {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 77vw;
+  }
+}
+@-webkit-keyframes menuTopHorizontalCenter {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes menuTopHorizontalCenter {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes menuTopHorizontalRight {
+  0% {
+    right: -150vw;
+  }
+  100% {
+    right: -91vw;
+  }
+}
+@keyframes menuTopHorizontalRight {
+  0% {
+    right: -150vw;
+  }
+  100% {
+    right: -91vw;
+  }
+}
 .menuBtn {
   background-color: transparent;
   border: 1px solid hotpink;
@@ -452,17 +517,37 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 .topVerticalLeft {
   display: block;
+  -webkit-animation-name: menuTopLeft;
+          animation-name: menuTopLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 .topVerticalRight {
   display: block;
-  left: 88vw;
+  left: 77vw;
+  -webkit-animation-name: menuTopVerticalRight;
+          animation-name: menuTopVerticalRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 .topHorizontalCenter {
   display: block;
-  width: 99vw;
+  width: 97.8vw;
   text-align: center;
+  -webkit-animation-name: menuTopHorizontalCenter;
+          animation-name: menuTopHorizontalCenter;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 .topHorizontalCenter a {
   display: inline-block;
@@ -470,8 +555,14 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 .topHorizontalLeft {
   display: block;
-  width: 99vw;
+  width: 97.8vw;
   text-align: left;
+  -webkit-animation-name: menuTopLeft;
+          animation-name: menuTopLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 .topHorizontalLeft a {
   display: inline-block;
@@ -479,8 +570,14 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 .topHorizontalRight {
   display: block;
-  width: 99vw;
+  width: 97.8vw;
   text-align: right;
+  -webkit-animation-name: menuTopHorizontalRight;
+          animation-name: menuTopHorizontalRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 .topHorizontalRight a {
   display: inline-block;

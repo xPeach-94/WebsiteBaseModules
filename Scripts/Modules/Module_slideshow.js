@@ -1,21 +1,21 @@
 // https://www.w3schools.com/howto/howto_js_slideshow.asp
 
-// let src1 = "https://www.eea.europa.eu/themes/biodiversity/state-of-nature-in-the-eu/state-of-nature-2020-subtopic/image_print"
-// let src2 = "https://thumbs.dreamstime.com/b/belle-for%C3%AAt-tropicale-%C3%A0-l-itin%C3%A9raire-am%C3%A9nag%C3%A9-pour-amateurs-de-la-nature-de-ka-d-ang-36703721.jpg"
-// let src3 = "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/1:1/w_2000,h_2000,c_limit/gettyimages-1146431497.jpg"
-// let src4 = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg"
-// // let imgSrc = [src1, src2, src3, src4];
-
-
 let imgSrc = [
     "https://www.eea.europa.eu/themes/biodiversity/state-of-nature-in-the-eu/state-of-nature-2020-subtopic/image_print",
     "https://thumbs.dreamstime.com/b/belle-for%C3%AAt-tropicale-%C3%A0-l-itin%C3%A9raire-am%C3%A9nag%C3%A9-pour-amateurs-de-la-nature-de-ka-d-ang-36703721.jpg",
     "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/1:1/w_2000,h_2000,c_limit/gettyimages-1146431497.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg"
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg",
+    "https://dutchreview.com/wp-content/uploads/image00001-1-e1597223439731.jpeg"
 ];
+
+let slideShowHeight = "30vh"
+
 
 
 let slideshow = document.getElementById("slideshow");
+slideshow.style.paddingBottom = "60px";
+slideshow.style.height = slideShowHeight;
+
 let slideshowContainer = document.createElement("div");
 slideshowContainer.classList.add("slideshowContainer");
 
@@ -55,7 +55,6 @@ slideshow.appendChild(slideshowContainer);
 
 // Dots
 
-
 let dotContainer = document.createElement("div");
 dotContainer.classList.add("dotContainer");
 
@@ -87,7 +86,8 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+function showSlides(n) 
+{
   let i;
   let slides = document.getElementsByClassName("slide");
   let dots = document.getElementsByClassName("dot");
@@ -101,4 +101,21 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+
+// Automatic Slideshow
+
+showSlides();
+
+function showSlides() 
+{
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 30000);
 }

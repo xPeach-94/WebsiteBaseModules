@@ -59,6 +59,12 @@ const createSlideshowElements = function(index, height, dots)
     next.setAttribute("onclick", "plusSlides(1, "+ (index-1) +")");
     next.innerHTML = "&#10095;";
 
+
+    slideshowContainer.appendChild(prev);
+    slideshowContainer.appendChild(next);
+    slideshow.appendChild(slideshowContainer);
+
+
     if (dots) 
     {
         // Dots
@@ -75,13 +81,8 @@ const createSlideshowElements = function(index, height, dots)
             dotContainer.appendChild(dot);
         }    
 
-    slideshowContainer.appendChild(dotContainer);
+        slideshow.appendChild(dotContainer);
     }
-
-
-    slideshowContainer.appendChild(prev);
-    slideshowContainer.appendChild(next);
-    slideshow.appendChild(slideshowContainer);
 }
 
 
@@ -99,28 +100,33 @@ for (let i = 1; i <= 100; i++)
 
 // Functionality
 
-let slideIndex = [1,1];
+let slideIndex = [1,1]; // slide number, slide index
 let slideId = ["slides1", "slides2"]
+
 showSlides(1, 0);
 showSlides(1, 1);
 
-function plusSlides(n, no) 
+function plusSlides(slideNumber, slideshowIndex) 
 {
-  showSlides(slideIndex[no] += n, no);
+    showSlides(slideIndex[slideshowIndex] += slideNumber, slideshowIndex);
 }
 
-function currentSlide(n, no) 
+function currentSlide(slideNumber, slideshowIndex) 
 {
-//   showSlides(slideIndex[no] += n, no);
+    console.log("slideNumber", slideNumber, "slideshowIndex,", slideshowIndex);
+
+    // showSlides(slideIndex[slideshowIndex] += slideNumber, slideshowIndex);
 }
 
-function showSlides(n, no) 
+function showSlides(slideNumber, slideshowIndex) 
 {
+    console.log(slideId, slideshowIndex, slideId[slideshowIndex]);
+
     let i;
-    let x = document.getElementsByClassName(slideId[no]);
+    let x = document.getElementsByClassName(slideId[slideshowIndex]);
     let dots = document.getElementsByClassName("dot");
-    if (n > x.length) {slideIndex[no] = 1}    
-    if (n < 1) {slideIndex[no] = x.length}
+    if (slideNumber > x.length) {slideIndex[slideshowIndex] = 1}    
+    if (slideNumber < 1) {slideIndex[slideshowIndex] = x.length}
     for (i = 0; i < x.length; i++) 
     {
         x[i].style.display = "none";  
@@ -129,7 +135,7 @@ function showSlides(n, no)
     {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    dots[slideIndex[n, no]].className += " active";
+    dots[slideIndex[slideNumber, slideshowIndex]].className += " active";
     
-    x[slideIndex[no]-1].style.display = "block";  
+    x[slideIndex[slideshowIndex]-1].style.display = "block";  
 }

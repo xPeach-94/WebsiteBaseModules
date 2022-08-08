@@ -1,0 +1,15 @@
+// Import styles here
+
+@import "Styles/BasicStyles/_1-normalize.scss";
+@import "Styles/BasicStyles/_2-reset";
+@import "Styles/BasicStyles/_3-general";
+@import "Styles/BasicStyles/_4-mixins";
+@import "Styles/BasicStyles/_5-variables";
+
+@import "Styles/_header";
+@import "Styles/_mainContent.scss";
+@import "Styles/_footer";
+
+@import "Styles/Modules/_Module_menu.scss";
+@import "Styles/Modules/Module_slideshow";
+@import "Styles/Modules/Module_Blog";

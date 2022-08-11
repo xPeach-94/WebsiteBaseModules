@@ -1,0 +1,46 @@
+$middleVar: 300px;
+
+#blog
+{
+    padding: 20px;
+}
+
+// .blogHeading :hover
+// {
+//     background: transparentize(gray, 0.6);
+//     color: white;
+// }
+
+.flex
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.title
+{
+    flex-grow: 1;
+    text-align: center;
+    height: 100%;    
+    padding: 20px 0;
+    padding-left: $middleVar;
+    cursor: pointer;
+}
+
+.arrow
+{
+    padding: 20px 0;
+    padding-right: $middleVar;
+    cursor: pointer;
+}
+
+.padding
+{
+    padding: 0 30px;
+}
+
+.hide
+{
+    display: none;
+}

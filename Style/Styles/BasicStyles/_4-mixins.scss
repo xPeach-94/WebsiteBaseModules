@@ -1,0 +1,39 @@
+// Mixins
+
+@mixin clearfix 
+{
+    &:before,
+    &:after
+    {
+        content: '';
+        display: table;
+    }
+    &:after
+    {
+        clear: both;
+    }
+}
+
+@mixin Tablet 
+{
+    @media (min-width: 768px) 
+    {
+        @content;
+    }
+}
+
+@mixin Laptop1024
+{
+    @media (min-width: 1024px) 
+    {
+        @content;
+    }
+}
+
+@mixin LaptopLarge
+{
+    @media (min-width: 1440px) 
+    {
+        @content;
+    }
+}

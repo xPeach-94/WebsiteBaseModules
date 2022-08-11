@@ -1,6 +1,14 @@
+$middleVar: 20%;
+
 #blog
 {
-    padding: 20px;
+    // margin: 20px;
+    width: 100%;
+
+    h1
+    {
+        margin: 0px;
+    }
 }
 
 // .blogHeading :hover
@@ -9,7 +17,7 @@
 //     color: white;
 // }
 
-.flex
+.flexBlog
 {
     width: 100%;
     display: flex;
@@ -22,20 +30,20 @@
     text-align: center;
     height: 100%;    
     padding: 20px 0;
-    margin-left: 40px;
+    padding-left: $middleVar;
     cursor: pointer;
 }
 
 .arrow
 {
     padding: 20px 0;
-    margin-right: 40px;
+    padding-right: $middleVar;
     cursor: pointer;
 }
 
-.padding
+.paddingBlog
 {
-    padding: 0 30px;
+    padding: 0 60px;
 }
 
 .hide

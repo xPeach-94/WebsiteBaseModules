@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <!--container for metadata-->
+    <head>
+        <!--Specify the character encoding for the HTML document.-->
+        <meta charset="utf-8">
+        
+        <!--Gives the browser instructions on how to control the page's dimensions and scaling.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.-->
+        <title>VEC</title>
+
+        <!--Defines the relationship between the current document and an external resource. Used to link to external style sheets.-->
+        <link rel="stylesheet" href="Style/Style.css">
+        <link rel="icon" type="image/x-icon" href="Images\beaver.ico">
+
+        <!--Used to embed a client-side script (JavaScript).-->
+        <!-- "defer" A script that will not run until after the page has loaded-->
+        
+        <script src="Scripts/date.js" defer type="text/javascript"></script>
+        <!-- <script src="Scripts/Modules/Module_resizeImage.js" defer type="text/javascript"></script> -->
+        <script src="Scripts/_header.js" defer type="text/javascript"></script>
+        <script src="Scripts/_footer.js" defer type="text/javascript"></script>
+        
+        <!-- <script src="Scripts/Script.js" defer type="text/javascript"></script> -->
+
+    </head>
+
+    <body>
+        
+        <header class="headerClass" id="headerId">
+            
+            <!-- sticky header -->
+            <div class="flex">
+                <div class="imgContainer fixWidth flex">
+                    <a href="index.html" class="flex">
+                        <img src="Images/Logo's/logo 1 pastel onderline.png" alt="VECLogo" class="imgLogo">
+                    </a>
+                    
+                </div>
+
+                <!-- Links are dynamic -->
+                <!-- Scripts/_header.js -->
+                <div class="links" id="headerLinksID">
+                    
+                </div>
+
+                <div class="center fixWidth">
+                    <p id="date"></p>
+                </div>
+            </div>
+            
+            <!-- event Banner -->
+            <div class="eventBanner"> 
+                <p>This is where upcoming events are displayed!</p>
+            </div>
+
+        </header>
+
+
+        <main class="mainClass flex vertical" id="mainId">
+            <p class="maintenance">This page is still in development. <br> Please be patient </p>
+        </main>
+
+
+        <footer class="footerClass flex" id="footerId">
+
+            <!-- Links are dynamic -->
+            <!-- Scripts/_footer.js -->
+            <div class="links" id="footerLinksID">
+
+            </div>
+        </footer>
+
+    </body>
+
+</html>

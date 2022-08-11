@@ -317,248 +317,206 @@ h1, h2, h3, h4, h5, h6, p, body {
   padding: 0px;
 }
 
-@-webkit-keyframes menuTopLeft {
-  0% {
-    left: -97.8vw;
-  }
-  100% {
-    left: 0px;
-  }
+.headerClass {
+  position: fixed;
+  top: 0px;
+  width: 80vw;
+  background-color: rgba(14, 14, 14, 0.8);
+  z-index: 1000;
+  color: #dadada;
 }
-
-@keyframes menuTopLeft {
-  0% {
-    left: -97.8vw;
-  }
-  100% {
-    left: 0px;
-  }
+.headerClass .flex {
+  height: 13vh;
 }
-@-webkit-keyframes menuTopVerticalRight {
-  0% {
-    left: 100vw;
-  }
-  100% {
-    left: 77vw;
-  }
+.headerClass .links {
+  max-width: 50%;
 }
-@keyframes menuTopVerticalRight {
-  0% {
-    left: 100vw;
-  }
-  100% {
-    left: 77vw;
-  }
-}
-@-webkit-keyframes menuTopHorizontalCenter {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-@keyframes menuTopHorizontalCenter {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-@-webkit-keyframes menuTopHorizontalRight {
-  0% {
-    right: -150vw;
-  }
-  100% {
-    right: -91vw;
-  }
-}
-@keyframes menuTopHorizontalRight {
-  0% {
-    right: -150vw;
-  }
-  100% {
-    right: -91vw;
-  }
-}
-.menuBtn {
-  background-color: transparent;
-  border: 1px solid hotpink;
-  border-radius: 10px;
-  height: 50px;
-  width: 50px;
+.headerClass ul {
+  list-style-type: none;
   padding: 0px;
+  margin: 0px;
+  justify-content: center;
 }
-
-.hamburgerMenuBar {
-  height: 0.3em;
-  width: 2em;
-  margin: 7px auto;
-  background-color: hotpink;
+.headerClass li {
+  padding: 5px 20px;
+  border-left: 1px solid #dadada;
 }
-
-.kebabMenuBar {
-  height: 0.32em;
-  width: 0.32em;
-  border: 1px solid hotpink;
-  border-radius: 50px;
-  margin: 7px auto;
-  background-color: hotpink;
+.headerClass li:nth-child(1) {
+  border-left: none;
 }
-
-.hotdogMenuBar {
-  height: 0.3em;
-  width: 1.4em;
-  margin: 7px auto;
-  background-color: hotpink;
-}
-
-.hotdogMenuBar:nth-child(2) {
-  width: 2em;
-}
-
-.friesMenuBar {
-  height: 0.3em;
-  width: 2em;
-  margin: 7px auto;
-  background-color: hotpink;
-}
-
-.friesMenuBar:nth-child(2) {
-  width: 1.4em;
-  margin-right: 8px;
-}
-
-.strawberryMenuBar {
-  height: 0.3em;
-  width: 2em;
-  margin: 7px auto;
-  background-color: hotpink;
-}
-
-.strawberryMenuBar:nth-child(2) {
-  width: 1.5em;
-}
-
-.strawberryMenuBar:nth-child(3) {
-  width: 1em;
-}
-
-.chocolateBarDiv {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.chocolateMenuBar {
-  height: 0.32em;
-  width: 0.32em;
-  border: 1px solid hotpink;
-  margin: 3px;
-  background-color: hotpink;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdownContent {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  z-index: 100;
-}
-
-/* Links inside the dropdown */
-.dropdownContent a {
-  color: black;
-  padding: 12px 16px;
+.headerClass a {
   text-decoration: none;
-  display: block;
+  color: #dadada;
+  height: 100%;
+}
+.headerClass a:hover {
+  text-decoration: underline;
+  color: #4c840b;
 }
 
-/* Change color of dropdown links on hover */
-.dropdownContent a:hover {
-  background-color: hotpink;
-}
-
-.topVerticalLeft {
-  display: block;
-  -webkit-animation-name: menuTopLeft;
-          animation-name: menuTopLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: -0.5s;
-          animation-delay: -0.5s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
-.topVerticalRight {
-  display: block;
-  left: 77vw;
-  -webkit-animation-name: menuTopVerticalRight;
-          animation-name: menuTopVerticalRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
-.topHorizontalCenter {
-  display: block;
-  width: 97.8vw;
+.imgContainer {
+  height: 80%;
   text-align: center;
-  -webkit-animation-name: menuTopHorizontalCenter;
-          animation-name: menuTopHorizontalCenter;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-.topHorizontalCenter a {
-  display: inline-block;
 }
 
-.topHorizontalLeft {
-  display: block;
-  width: 97.8vw;
-  text-align: left;
-  -webkit-animation-name: menuTopLeft;
-          animation-name: menuTopLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-.topHorizontalLeft a {
-  display: inline-block;
+.links {
+  flex-grow: 1;
 }
 
-.topHorizontalRight {
-  display: block;
-  width: 97.8vw;
-  text-align: right;
-  -webkit-animation-name: menuTopHorizontalRight;
-          animation-name: menuTopHorizontalRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-.topHorizontalRight a {
-  display: inline-block;
+.imgLogo {
+  width: 100%;
+  align-self: center;
 }
 
-.slideShow {
-  margin: 20px;
+.center {
+  text-align: center;
 }
 
-.slideShowDots {
-  padding-bottom: 60px;
+.fixWidth {
+  width: 160px;
+}
+
+.eventBanner {
+  display: none;
+  height: 5vh;
+  text-align: center;
+  margin-top: auto;
+  line-height: 5vh;
+  border-top: 2px dotted #07447b;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.mainClass {
+  background-color: rgba(76, 132, 11, 0.4);
+  padding-top: 20vh;
+  padding-bottom: 2vh;
+}
+
+.solidBackground {
+  padding: 20px 0;
+  background-color: rgba(76, 132, 11, 0.7);
+}
+
+.intro {
+  width: 100%;
+  line-height: 1.2em;
+}
+
+.width60 {
+  width: 60%;
+}
+
+.portret {
+  width: 40%;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pictures {
+  width: 20%;
+}
+
+.blogHeading {
+  margin: 0px;
+  padding: 15px 0;
+  width: 100%;
+  background-color: #4c840b;
+}
+
+.hide {
+  display: none;
+}
+
+.footerClass {
+  width: 80vw;
+  background-color: rgba(14, 14, 14, 0.8);
+  height: 7vh;
+}
+.footerClass ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+}
+.footerClass li {
+  padding: 5px 20px;
+  border-left: 1px solid #dadada;
+}
+.footerClass li:nth-child(1) {
+  border-left: none;
+}
+.footerClass a {
+  text-decoration: none;
+  color: #dadada;
+}
+.footerClass a:hover {
+  text-decoration: underline;
+  color: #4c840b;
+}
+
+body {
+  width: 80vw;
+  margin: auto;
+  background-image: url("https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?cs=srgb&dl=pexels-pixabay-257360.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.vertical {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bigGap {
+  gap: 10vh;
+}
+
+.float {
+  float: right;
+}
+.float:before, .float:after {
+  content: "";
+  display: table;
+}
+.float:after {
+  clear: both;
+}
+
+.padding {
+  padding: 20px 50px;
+}
+
+.maintenance {
+  font-size: 200%;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  width: 70%;
+  padding: 20px 0px;
+  background-color: rgba(76, 132, 11, 0.7);
+}
+
+h1 {
+  text-align: center;
+  color: #dadada;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: #dadada;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 .slideImg {
@@ -663,10 +621,13 @@ h1, h2, h3, h4, h5, h6, p, body {
   }
 }
 #blog {
-  padding: 20px;
+  width: 100%;
+}
+#blog h1 {
+  margin: 0px;
 }
 
-.flex {
+.flexBlog {
   width: 100%;
   display: flex;
   align-items: center;
@@ -677,18 +638,18 @@ h1, h2, h3, h4, h5, h6, p, body {
   text-align: center;
   height: 100%;
   padding: 20px 0;
-  margin-left: 40px;
+  padding-left: 20%;
   cursor: pointer;
 }
 
 .arrow {
   padding: 20px 0;
-  margin-right: 40px;
+  padding-right: 20%;
   cursor: pointer;
 }
 
-.padding {
-  padding: 0 30px;
+.paddingBlog {
+  padding: 0 60px;
 }
 
 .hide {

@@ -6,6 +6,7 @@
 // -------------------------------------------------------------------------------------------------------
 
 let blogId = document.getElementById("blog");
+blogId.classList.add("solidBackground");
 
 let blogs = []
 
@@ -30,7 +31,7 @@ const createPost = function(title, date, content)
     let container = document.createElement("div");
     
     let titleDiv = document.createElement("div");
-    titleDiv.classList.add("flex");
+    titleDiv.classList.add("flexBlog");
 
 
     let blogTitle = document.createElement("h1");
@@ -50,7 +51,7 @@ const createPost = function(title, date, content)
     titleDiv.appendChild(clickArrow);
 
     let blogContent = document.createElement("p");
-    blogContent.setAttribute("class", "padding hide");
+    blogContent.setAttribute("class", "paddingBlog hide text");
     blogContent.id = blogTitle.title;
     blogContent.innerHTML = content;
 

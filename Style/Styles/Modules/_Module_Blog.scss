@@ -5,17 +5,21 @@ $middleVar: 300px;
     padding: 20px;
 }
 
-// .blogHeading :hover
-// {
-//     background: transparentize(gray, 0.6);
-//     color: white;
-// }
+.hide
+{
+    display: none;
+}
 
 .flex
 {
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+.border
+{
+    border-bottom: 2px dashed $color;
 }
 
 .title
@@ -35,12 +39,35 @@ $middleVar: 300px;
     cursor: pointer;
 }
 
-.padding
+.blogImgContainer
 {
-    padding: 0 30px;
+    display: inline-block;
 }
 
-.hide
+.blogImg
 {
-    display: none;
+    width: 100%;
+}
+
+.imgDirection-topLeft
+{
+
+    float: left;
+    margin-right: 20px;
+}
+.imgDirection-topRight
+{
+    float: right;
+    margin-left: 20px;
+}
+
+.clearfix
+{
+    @include clearfix
+}
+
+.padding
+{
+    padding: 20px 30px;
+    // padding-top: 20px;
 }

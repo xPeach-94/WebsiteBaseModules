@@ -1,3 +1,14 @@
+// imgDirections:
+// topLeft, topRight
+
+// {
+//     blogTitle: "",
+//     blogDate: "yyyy-mm-dd",
+//     blogPost: ``,
+//     img: "",
+//     imgDirection: ""
+// },
+
 const blogArr =
 [
     {
@@ -10,7 +21,10 @@ const blogArr =
         fugit necessitatibus vel mollitia voluptatem. Vel iusto laboriosam At dolorem autem ut assumenda accusantium et quia quae. Quo molestiae atque 
         eos pariatur dolores est porro eveniet sed Quis provident? Et unde architecto sit soluta minus ut doloremque deleniti sit eaque adipisci. Et 
         repellendus obcaecati hic quia nisi sit natus magni eum commodi repellendus. Ea accusamus dolor et consequatur minima non accusamus explicabo 
-        aut sunt quae qui voluptas omnis et nihil iure.`
+        aut sunt quae qui voluptas omnis et nihil iure.`,
+        img: "Images/Placeholder.png",
+        imgDirection: "topRight",
+        imgWidth: "30%",
     },
 
     {
@@ -23,7 +37,10 @@ const blogArr =
         fugit necessitatibus vel mollitia voluptatem. Vel iusto laboriosam At dolorem autem ut assumenda accusantium et quia quae. Quo molestiae atque 
         eos pariatur dolores est porro eveniet sed Quis provident? Et unde architecto sit soluta minus ut doloremque deleniti sit eaque adipisci. Et 
         repellendus obcaecati hic quia nisi sit natus magni eum commodi repellendus. Ea accusamus dolor et consequatur minima non accusamus explicabo 
-        aut sunt quae qui voluptas omnis et nihil iure.`
+        aut sunt quae qui voluptas omnis et nihil iure.`,
+        img: "",
+        imgDirection: "",
+        imgWidth: "",
     },
 
     {
@@ -36,6 +53,9 @@ const blogArr =
         fugit necessitatibus vel mollitia voluptatem. Vel iusto laboriosam At dolorem autem ut assumenda accusantium et quia quae. Quo molestiae atque 
         eos pariatur dolores est porro eveniet sed Quis provident? Et unde architecto sit soluta minus ut doloremque deleniti sit eaque adipisci. Et 
         repellendus obcaecati hic quia nisi sit natus magni eum commodi repellendus. Ea accusamus dolor et consequatur minima non accusamus explicabo 
-        aut sunt quae qui voluptas omnis et nihil iure.`
+        aut sunt quae qui voluptas omnis et nihil iure.`,
+        img: "",
+        imgDirection: "",
+        imgWidth: "",
     },
 ]

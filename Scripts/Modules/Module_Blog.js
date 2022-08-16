@@ -25,13 +25,13 @@ const showPosts = function()
     });
 }
 
-const createPost = function(title, date, content)
+const createPost = function(title, date, content, imgSrc, imgDirection, imgWidth)
 {
     let container = document.createElement("div");
     
     let titleDiv = document.createElement("div");
     titleDiv.classList.add("flex");
-
+    titleDiv.classList.add("border");
 
     let blogTitle = document.createElement("h1");
     blogTitle.setAttribute("title", "post"+blogs.length);
@@ -49,19 +49,50 @@ const createPost = function(title, date, content)
     titleDiv.appendChild(blogTitle);
     titleDiv.appendChild(clickArrow);
 
+    let blogContentContainer = document.createElement("div");
+    blogContentContainer.id = blogTitle.title
+    blogContentContainer.setAttribute("class", "padding hide border");
+
     let blogContent = document.createElement("p");
-    blogContent.setAttribute("class", "padding hide");
-    blogContent.id = blogTitle.title;
     blogContent.innerHTML = content;
 
     container.appendChild(titleDiv);
-    container.appendChild(blogContent);
+
+    if (imgSrc != "") 
+    {
+        blogContentContainer.classList.add("clearfix");
+
+        let blogImgContainer = document.createElement("div");
+        blogImgContainer.classList.add("blogImgContainer");
+        blogImgContainer.style.width = imgWidth;
+
+        if (imgDirection != "") 
+        {
+            blogImgContainer.classList.add("imgDirection-"+imgDirection)
+        }
+        else
+        {
+            console.log("No image direction given...");
+        }
+
+        let blogImg = document.createElement("img");
+        blogImg.src = imgSrc;
+        blogImg.classList.add("blogImg");
+
+        blogImgContainer.appendChild(blogImg);
+        blogContentContainer.appendChild(blogImgContainer);
+    }
+
+    blogContentContainer.appendChild(blogContent);
+    container.appendChild(blogContentContainer);
     blogs.unshift(container);
 }
 
+// -----------------------------------------------------------------------------------------------------------
+
 blogArr.forEach(blog => 
 {
-    createPost(blog.blogTitle, blog.blogDate, blog.blogPost);
+    createPost(blog.blogTitle, blog.blogDate, blog.blogPost, blog.img, blog.imgDirection, blog.imgWidth);
 });
 
 showPosts();

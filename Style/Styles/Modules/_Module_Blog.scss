@@ -1,5 +1,3 @@
-$middleVar: 300px;
-
 #blog
 {
     padding: 20px;
@@ -13,6 +11,7 @@ $middleVar: 300px;
 .flex
 {
     width: 100%;
+    gap: 30px;
     display: flex;
     align-items: center;
 }
@@ -24,19 +23,21 @@ $middleVar: 300px;
 
 .title
 {
-    flex-grow: 1;
     text-align: center;
     height: 100%;    
     padding: 20px 0;
-    padding-left: $middleVar;
     cursor: pointer;
 }
 
 .arrow
 {
-    padding: 20px 0;
-    padding-right: $middleVar;
+    // text-align: center;
     cursor: pointer;
+}
+
+.centerWidth
+{
+    flex-grow: 1;
 }
 
 .blogImgContainer
@@ -69,5 +70,4 @@ $middleVar: 300px;
 .padding
 {
     padding: 20px 30px;
-    // padding-top: 20px;
 }

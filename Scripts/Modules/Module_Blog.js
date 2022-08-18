@@ -32,6 +32,10 @@ const createPost = function(title, date, content, imgSrc, imgDirection, imgWidth
     titleDiv.classList.add("flex");
     titleDiv.classList.add("border");
 
+    let headerPlaceholder = document.createElement("div");
+    headerPlaceholder.style.height = "1px";
+    headerPlaceholder.classList.add("centerWidth");
+
     let blogTitle = document.createElement("h1");
     blogTitle.setAttribute("title", "post"+blogs.length);
     blogTitle.classList.add("title");
@@ -41,10 +45,12 @@ const createPost = function(title, date, content, imgSrc, imgDirection, imgWidth
 
     let clickArrow = document.createElement("h1");
     clickArrow.classList.add("arrow");
+    clickArrow.classList.add("centerWidth");
     clickArrow.setAttribute("title", "post"+blogs.length);
     clickArrow.setAttribute("onclick", "hideBlog(this)")
     clickArrow.innerHTML = "&#8629";
 
+    titleDiv.appendChild(headerPlaceholder);
     titleDiv.appendChild(blogTitle);
     titleDiv.appendChild(clickArrow);
 

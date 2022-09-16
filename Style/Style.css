@@ -317,9 +317,30 @@ h1, h2, h3, h4, h5, h6, p, body {
   padding: 0px;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+.fontSize {
+  font-size: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.vertical {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
 .mainClass {
   margin: 20px;
-  border: 1px solid purple;
+  padding: 20px;
 }
 
 @-webkit-keyframes menuTopLeft {
@@ -675,7 +696,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   display: none;
 }
 
-.flex {
+.flexBlog {
   width: 100%;
   gap: 30px;
   display: flex;
@@ -729,4 +750,21 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 .padding {
   padding: 20px 30px;
+}
+
+.input {
+  width: 100px;
+  text-align: end;
+}
+
+.button, .button--enter {
+  color: white;
+  background-color: #33bd33;
+  border: none;
+  border-radius: 5px;
+}
+.button--enter {
+  background-color: lightgrey;
+  color: black;
+  border: solid 1px black;
 }/*# sourceMappingURL=Style.css.map */

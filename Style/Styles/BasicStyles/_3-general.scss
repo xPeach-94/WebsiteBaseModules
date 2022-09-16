@@ -8,3 +8,26 @@
 // {
 //     font-size: 1.3em;
 // }
+h1
+{
+    font-size: 3rem;
+}
+
+.fontSize
+{
+    font-size: 1.5rem;
+}
+
+.flex
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.vertical
+{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}

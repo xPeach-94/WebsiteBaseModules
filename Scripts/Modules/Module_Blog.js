@@ -29,7 +29,7 @@ const createPost = function(title, date, content, imgSrc, imgDirection, imgWidth
     let container = document.createElement("div");
     
     let titleDiv = document.createElement("div");
-    titleDiv.classList.add("flex");
+    titleDiv.classList.add("flexBlog");
     titleDiv.classList.add("border");
 
     let headerPlaceholder = document.createElement("div");

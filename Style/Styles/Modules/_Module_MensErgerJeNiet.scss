@@ -1,15 +1,35 @@
-$boardDimension: 82vh;
-$stepDimension: 80px;
+$boardDimension: 72vh;
+$stepDimension: 80%;
 
 $yellow: #feed01;
 $green: #23972a;
 $red: #e3001b;
 $blue: #006bb3;
 
+#mensErgerJeMinder
+{
+    background-image: url("../../Images/woodBackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: solid 5px #a6825e;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    width: 80vw;
+    margin: auto;
+}
+
+h1
+{
+    color: darken($red, 8%);
+}
+
 table
 {
     background: rgb(255,255,169);
     background: radial-gradient(circle, rgba(255,255,169,1) 0%, rgba(247,232,81,1) 100%);
+    padding: 20px;
+    border: ridge 5px $red;
     height: $boardDimension;
     width: $boardDimension;
 }
@@ -59,4 +79,21 @@ td
 {
     background-color: transparent;
     border: none;
+}
+
+.startArrow
+{
+    font-size: 40px;
+}
+.greenArrow
+{
+    transform: rotate(90deg);
+}
+.redArrow
+{
+    transform: rotate(180deg);
+}
+.blueArrow
+{
+    transform: rotate(270deg);
 }

@@ -339,7 +339,6 @@ h1 {
 }
 
 .mainClass {
-  margin: 20px;
   padding: 20px;
 }
 
@@ -769,11 +768,29 @@ h1 {
   border: solid 1px black;
 }
 
+#mensErgerJeMinder {
+  background-image: url("../../Images/woodBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: solid 5px #a6825e;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  width: 80vw;
+  margin: auto;
+}
+
+h1 {
+  color: #ba0016;
+}
+
 table {
   background: rgb(255, 255, 169);
   background: radial-gradient(circle, rgb(255, 255, 169) 0%, rgb(247, 232, 81) 100%);
-  height: 82vh;
-  width: 82vh;
+  padding: 20px;
+  border: ridge 5px #e3001b;
+  height: 72vh;
+  width: 72vh;
 }
 
 tr {
@@ -788,8 +805,8 @@ td {
 }
 
 .circle {
-  height: 80px;
-  width: 80px;
+  height: 80%;
+  width: 80%;
   background-color: white;
   border: solid 1px black;
   border-radius: 100%;
@@ -815,4 +832,20 @@ td {
 #step2, #step8, #step6, #step14, #step36, #step44, #step42, #step48, #step25 {
   background-color: transparent;
   border: none;
+}
+
+.startArrow {
+  font-size: 40px;
+}
+
+.greenArrow {
+  transform: rotate(90deg);
+}
+
+.redArrow {
+  transform: rotate(180deg);
+}
+
+.blueArrow {
+  transform: rotate(270deg);
 }/*# sourceMappingURL=Style.css.map */

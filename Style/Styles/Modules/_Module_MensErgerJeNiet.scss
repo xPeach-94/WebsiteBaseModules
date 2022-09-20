@@ -1,0 +1,62 @@
+$boardDimension: 82vh;
+$stepDimension: 80px;
+
+$yellow: #feed01;
+$green: #23972a;
+$red: #e3001b;
+$blue: #006bb3;
+
+table
+{
+    background: rgb(255,255,169);
+    background: radial-gradient(circle, rgba(255,255,169,1) 0%, rgba(247,232,81,1) 100%);
+    height: $boardDimension;
+    width: $boardDimension;
+}
+tr
+{
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+td
+{
+    height: 100%;
+    width: 100%;
+}
+.circle
+{
+    height: $stepDimension;
+    width: $stepDimension;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 100%;
+    z-index: 10;
+}
+
+// mens erger je minder colored steps:
+#step1, #step9, #step15, #step23, #step24 //Yellow
+{
+    background-color: $yellow;
+}
+
+#step5, #step7, #step13, #step11, #step18 // green
+{
+    background-color: $green;
+}
+
+#step26, #step27, #step35, #step41, #step49 // red
+{
+    background-color: $red;
+}
+
+#step32, #step39, #step45, #step37, #step43 // blue
+{
+    background-color: $blue;
+}
+
+#step2, #step8, #step6, #step14, #step36, #step44, #step42, #step48, #step25 // transparent
+{
+    background-color: transparent;
+    border: none;
+}

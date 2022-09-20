@@ -767,4 +767,52 @@ h1 {
   background-color: lightgrey;
   color: black;
   border: solid 1px black;
+}
+
+table {
+  background: rgb(255, 255, 169);
+  background: radial-gradient(circle, rgb(255, 255, 169) 0%, rgb(247, 232, 81) 100%);
+  height: 82vh;
+  width: 82vh;
+}
+
+tr {
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+
+td {
+  height: 100%;
+  width: 100%;
+}
+
+.circle {
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 100%;
+  z-index: 10;
+}
+
+#step1, #step9, #step15, #step23, #step24 {
+  background-color: #feed01;
+}
+
+#step5, #step7, #step13, #step11, #step18 {
+  background-color: #23972a;
+}
+
+#step26, #step27, #step35, #step41, #step49 {
+  background-color: #e3001b;
+}
+
+#step32, #step39, #step45, #step37, #step43 {
+  background-color: #006bb3;
+}
+
+#step2, #step8, #step6, #step14, #step36, #step44, #step42, #step48, #step25 {
+  background-color: transparent;
+  border: none;
 }/*# sourceMappingURL=Style.css.map */

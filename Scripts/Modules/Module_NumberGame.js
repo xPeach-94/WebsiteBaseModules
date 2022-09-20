@@ -17,11 +17,21 @@ function getRandomInt(max)
 // console.log(getRandomInt(3));
 // // expected output: 0, 1 or 2
 
-function keyEnter() 
+function keyEnter(el) 
 {
-    if(event.key == "Enter") 
+    if (el.id == "rangeInputID") 
     {
-        guessNr();
+        if(event.key == "Enter") 
+        {
+            startGame();
+        }
+    }
+    else if (el.id == "guessInpID") 
+    {
+        if(event.key == "Enter") 
+        {
+            guessNr();
+        }
     }
 }
 
@@ -46,6 +56,7 @@ const createStartup = function()
     rangeInput.type = "number";
     rangeInput.value = "100";
     rangeInput.id = "rangeInputID";
+    rangeInput.setAttribute("onkeydown", "keyEnter(this)");
 
     startButton.classList.add("fontSize");
     startButton.classList.add("button");

@@ -784,6 +784,11 @@ h1 {
   color: #ba0016;
 }
 
+.playgroundContainer {
+  width: 90%;
+  gap: 20px;
+}
+
 table {
   background: rgb(255, 255, 169);
   background: radial-gradient(circle, rgb(255, 255, 169) 0%, rgb(247, 232, 81) 100%);
@@ -848,4 +853,19 @@ td {
 
 .blueArrow {
   transform: rotate(270deg);
+}
+
+.diceContainer {
+  height: 72vh;
+  max-width: 54vh;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+h2 {
+  justify-content: start;
+}
+
+.diceFace {
+  font-size: 8rem;
 }/*# sourceMappingURL=Style.css.map */

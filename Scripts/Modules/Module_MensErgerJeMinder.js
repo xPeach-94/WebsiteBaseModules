@@ -1,28 +1,29 @@
-let rightArrow = "&#10163";
+const rightArrow = "&#10163";
+const pawn = "&#9823;";
 
 let playground = document.getElementById("mensErgerJeMinder");
 playground.classList.add("flex");
 playground.classList.add("vertical");
 
-// let testcontainer = document.createElement("div");
-// testcontainer.classList.add("test");
-// let test = document.createElement("p");
-// test.innerHTML = rightArrow;
-// test.style.fontSize = "70px"
-// testcontainer.appendChild(test);
-// playground.appendChild(testcontainer);
-
-const pawn = "&#9823;";
-
 const createStartup = function()
 {
     let heading = document.createElement("h1");
-    heading.innerHTML = "Mens Erger je Minder"
+    heading.innerHTML = "Mens Erger je Minder";
+
+    let playgroundContainer = document.createElement("div");
+    playgroundContainer.classList.add("flex");
+    playgroundContainer.classList.add("playgroundContainer")
+
     let table = document.createElement("table");
     table.classList.add("flex");
     table.classList.add("vertical");
     table.style.justifyContent = "center";
     table.style.gap = "0px";
+
+    let diceContainer = document.createElement("div");
+    diceContainer.id = "diceContainer";
+    diceContainer.classList.add("diceContainer");
+
     let uID = 0;
 
     for (let i = 0; i < 7; i++) 
@@ -47,6 +48,11 @@ const createStartup = function()
                     case 5:
                     {
                         startArrow.classList.add("greenArrow");
+                        break;
+                    }
+                    case 15:
+                    {
+                        // yellow arrow is already good rotation
                         break;
                     }
                     case 35:
@@ -77,8 +83,14 @@ const createStartup = function()
         table.appendChild(tr);
     }
 
+    playgroundContainer.appendChild(table);
+    playgroundContainer.appendChild(diceContainer);
     playground.appendChild(heading);
-    playground.appendChild(table);
+    playground.appendChild(playgroundContainer);
 }
 
 createStartup();
+
+createDice();
+createDice();
+createDice();

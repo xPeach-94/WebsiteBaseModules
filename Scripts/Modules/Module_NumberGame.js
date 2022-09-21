@@ -10,12 +10,12 @@ let playground = document.getElementById("numberGame");
 playground.classList.add("flex");
 playground.classList.add("vertical");
 
-function getRandomInt(max) 
-{
-    return Math.floor(Math.random() * max);
-}
-// console.log(getRandomInt(3));
-// // expected output: 0, 1 or 2
+// function getRandomInt(max) 
+// {
+//     return Math.floor(Math.random() * max);
+// }
+// // console.log(getRandomInt(3));
+// // // expected output: 0, 1 or 2
 
 function keyEnter(el) 
 {

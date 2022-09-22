@@ -1,7 +1,7 @@
 .diceContainer
 {
     height: $boardDimension;
-    max-width: (($boardDimension / 4) * 3);
+    max-width: 25%;
     flex-grow: 1;
     // border: solid 1px black;
     justify-content: flex-start;

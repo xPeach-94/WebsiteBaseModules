@@ -5,38 +5,56 @@ const diceFace4 = "&#9859;";
 const diceFace5 = "&#9860;";
 const diceFace6 = "&#9861;";
 
-const heading = function()
+var amount = 0;
+
+const heading = function(int)
 {
-    let diceContainer = document.getElementById("diceContainer");
-    diceContainer.classList.add("flex");
-    diceContainer.classList.add("vertical");
+    if (!int > 0) 
+    {
+        let diceContainer = document.getElementById("diceContainer");
+        diceContainer.classList.add("flex");
+        diceContainer.classList.add("vertical");
 
-    let containerForDice = document.createElement("div");
-    containerForDice.classList.add("flex");
-    containerForDice.style.flexWrap = "wrap";
-    containerForDice.style.width = "100%";
+        let containerForDice = document.createElement("div");
+        containerForDice.id = "cfd";
+        containerForDice.classList.add("flex");
+        containerForDice.style.flexWrap = "wrap";
+        containerForDice.style.width = "100%";
 
-    let shake = document.createElement("h2");
-    shake.innerHTML = "Click dice to shake";
-    diceContainer.appendChild(shake);
-    diceContainer.appendChild(containerForDice);
+        let shake = document.createElement("h2");
+        shake.innerHTML = "Click dice to shake";
+        diceContainer.appendChild(shake);
+        diceContainer.appendChild(containerForDice);
+    }
+    
 }
 
 const createDice = function()
 {
-    heading();
+    heading(amount);
+    amount++
+
+    let cfd = document.getElementById("cfd");
+
     let dice1 = document.createElement("div");
 
     let diceFace = document.createElement("p");
     diceFace.classList.add("diceFace");
     diceFace. setAttribute("onclick", "shakeDice(this)");
-    diceFace.innerHTML = diceFace1;
+    let r = getRandomInt(7);
+    if (r != 0) 
+    {
+        diceFace.innerHTML = diceSwitch(r);
+    }
+    else
+    {
+        r = 1;
+        diceFace.innerHTML = diceSwitch(r);
+    }
 
     dice1.appendChild(diceFace);
-    containerForDice.appendChild(dice1);
+    cfd.appendChild(dice1);
 }
-
-// createDice();
 
 const diceSwitch = function(roll)
 {
@@ -85,7 +103,8 @@ const shakeDice = function(el)
         if (randomInt != 0) 
         {
             roll = diceSwitch(randomInt);
-            el.innerHTML = roll
+            el.id = randomInt;
+            el.innerHTML = roll;
         }
     }, 150);
 

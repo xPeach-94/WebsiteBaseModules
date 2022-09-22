@@ -5,6 +5,8 @@ let playground = document.getElementById("mensErgerJeMinder");
 playground.classList.add("flex");
 playground.classList.add("vertical");
 
+let players;
+
 const createStartup = function()
 {
     let heading = document.createElement("h1");
@@ -87,10 +89,13 @@ const createStartup = function()
     playgroundContainer.appendChild(diceContainer);
     playground.appendChild(heading);
     playground.appendChild(playgroundContainer);
+
+    createDice();
+
+
+    // players = window.prompt("How many players?");
+
+    // console.log(players)
 }
 
 createStartup();
-
-createDice();
-createDice();
-createDice();

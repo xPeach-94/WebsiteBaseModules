@@ -857,7 +857,7 @@ td {
 
 .diceContainer {
   height: 72vh;
-  max-width: 54vh;
+  max-width: 25%;
   flex-grow: 1;
   justify-content: flex-start;
 }

@@ -61,27 +61,27 @@ td
 }
 
 // mens erger je minder colored steps:
-#step1, #step9, #step15, #step23, #step24 //Yellow
+#A1, #B2, #C1, #D2, #D3 //Yellow
 {
     background-color: $yellow;
 }
 
-#step5, #step7, #step13, #step11, #step18 // green
+#A5, #A7, #B4, #B6, #C4 // green
 {
     background-color: $green;
 }
 
-#step26, #step27, #step35, #step41, #step49 // red
+#D5, #D6, #E7, #F6, #G7 // red
 {
     background-color: $red;
 }
 
-#step32, #step39, #step45, #step37, #step43 // blue
+#E4, #F4, #G3, #F2, #G1 // blue
 {
     background-color: $blue;
 }
 
-#step2, #step8, #step6, #step14, #step36, #step44, #step42, #step48, #step25 // transparent
+#A2, #A6, #B1, #B7, #D4, #F1, #F7, #G2, #G6 // transparent
 {
     background-color: transparent;
     border: none;
@@ -102,4 +102,83 @@ td
 .blueArrow
 {
     transform: rotate(270deg);
+}
+
+.form-popup 
+{
+    // https://www.w3schools.com/howto/howto_js_popup_form.asp
+    background-color: cornsilk;
+    // display: block;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    height: 630px;
+    top: 50%;
+    margin-top: -18%;
+    position: fixed;
+    border: ridge 5px $red;
+    z-index: 15;
+}
+
+.filler
+{
+    flex-grow: 1;
+    width: 100%;
+    // background-color: #a6825e;
+}
+
+.inputContainer
+{
+    width: 150px;
+}
+
+.playerInp
+{
+    width: 50px;
+    text-align: center;
+}
+
+.enterBtn
+{
+    font-size: 30px;
+    padding: 5px 6px 3px 6px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: $green;
+}
+.enterBtn:hover:enabled
+{
+    color: black;
+    background-color: $green;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.playerColorDiv
+{
+    width: 200px;
+}
+
+.radioDiv
+{
+    text-align: start;
+}
+
+.startGame
+{
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid $green;
+    color: $green;
+}
+.startGame:hover:enabled
+{
+    color: black;
+    background-color: $green;
 }

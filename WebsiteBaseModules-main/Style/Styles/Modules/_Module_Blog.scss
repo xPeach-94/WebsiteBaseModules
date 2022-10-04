@@ -1,0 +1,73 @@
+#blog
+{
+    padding: 20px;
+}
+
+.hide
+{
+    display: none;
+}
+
+.flexBlog
+{
+    width: 100%;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.border
+{
+    border-bottom: 2px dashed $color;
+}
+
+.title
+{
+    text-align: center;
+    height: 100%;    
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.arrow
+{
+    // text-align: center;
+    cursor: pointer;
+}
+
+.centerWidth
+{
+    flex-grow: 1;
+}
+
+.blogImgContainer
+{
+    display: inline-block;
+}
+
+.blogImg
+{
+    width: 100%;
+}
+
+.imgDirection-topLeft
+{
+
+    float: left;
+    margin-right: 20px;
+}
+.imgDirection-topRight
+{
+    float: right;
+    margin-left: 20px;
+}
+
+.clearfix
+{
+    @include clearfix
+}
+
+.padding
+{
+    padding: 20px 30px;
+}

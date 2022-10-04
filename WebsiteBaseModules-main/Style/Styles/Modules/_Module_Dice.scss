@@ -1,0 +1,18 @@
+.diceContainer
+{
+    height: $boardDimension;
+    max-width: 25%;
+    flex-grow: 1;
+    // border: solid 1px black;
+    justify-content: flex-start;
+}
+
+h2
+{
+    justify-content: start;
+}
+
+.diceFace
+{
+    font-size: 8rem;
+}

@@ -1,0 +1,22 @@
+.input
+{
+    width: 100px;
+    text-align: end;
+}
+
+.button
+{
+    color: white;
+    background-color: #33bd33;
+    border: none;
+    border-radius: 5px;
+
+    &--enter
+    {
+        @extend .button;
+        background-color: lightgrey;
+        color: black;
+        border: solid 1px black;
+    }
+}
+

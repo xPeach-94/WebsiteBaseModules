@@ -1,0 +1,205 @@
+$boardDimension: 72vh;
+$stepDimension: 80%;
+
+$yellow: #feed01;
+$green: #23972a;
+$red: #e3001b;
+$blue: #006bb3;
+
+#mensErgerJeMinder
+{
+    background-image: url("../../Images/woodBackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: solid 5px #a6825e;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    width: 80vw;
+    margin: auto;
+}
+
+h1
+{
+    color: darken($red, 8%);
+}
+
+.playgroundContainer
+{
+    width: 90%;
+    gap: 20px;
+}
+
+table
+{
+    background: rgb(255,255,169);
+    background: radial-gradient(circle, rgba(255,255,169,1) 0%, rgba(247,232,81,1) 100%);
+    padding: 20px;
+    border: ridge 5px $red;
+    height: $boardDimension;
+    width: $boardDimension;
+}
+tr
+{
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+td
+{
+    height: 100%;
+    width: 100%;
+}
+.circle
+{
+    height: $stepDimension;
+    width: $stepDimension;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 100%;
+    z-index: 10;
+}
+
+// mens erger je minder colored steps:
+#A1, #B2, #C1, #D2, #D3 //Yellow
+{
+    background-color: $yellow;
+}
+
+#A5, #A7, #B4, #B6, #C4 // green
+{
+    background-color: $green;
+}
+
+#D5, #D6, #E7, #F6, #G7 // red
+{
+    background-color: $red;
+}
+
+#E4, #F4, #G3, #F2, #G1 // blue
+{
+    background-color: $blue;
+}
+
+#A2, #A6, #B1, #B7, #D4, #F1, #F7, #G2, #G6 // transparent
+{
+    background-color: transparent;
+    border: none;
+}
+
+.startArrow
+{
+    font-size: 40px;
+}
+.greenArrow
+{
+    transform: rotate(90deg);
+}
+.redArrow
+{
+    transform: rotate(180deg);
+}
+.blueArrow
+{
+    transform: rotate(270deg);
+}
+
+.form-popup 
+{
+    // https://www.w3schools.com/howto/howto_js_popup_form.asp
+    background-color: cornsilk;
+    // display: block;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    height: 630px;
+    top: 50%;
+    margin-top: -18%;
+    position: fixed;
+    border: ridge 5px $red;
+    z-index: 15;
+}
+
+.filler
+{
+    flex-grow: 1;
+    width: 100%;
+    // background-color: #a6825e;
+}
+
+.inputContainer
+{
+    width: 150px;
+}
+
+.playerInp
+{
+    width: 50px;
+    text-align: center;
+}
+
+.enterBtn
+{
+    font-size: 30px;
+    padding: 5px 6px 3px 6px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: $green;
+}
+.enterBtn:hover:enabled
+{
+    color: black;
+    background-color: $green;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.playerColorDiv
+{
+    width: 200px;
+}
+
+.radioDiv
+{
+    text-align: start;
+}
+
+.startGame
+{
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid $green;
+    color: $green;
+}
+.startGame:hover:enabled
+{
+    color: black;
+    background-color: $green;
+}
+
+.green
+{
+    color: lighten($green, 20%);
+    font-size: 50px;
+}
+.blue
+{
+    color: lighten($blue, 20%);
+    font-size: 50px;
+}
+.red
+{
+    color: darken($red, 20%);
+    font-size: 50px;
+}
+.yellow
+{
+    color: darken($yellow, 10%);
+    font-size: 50px;
+}
